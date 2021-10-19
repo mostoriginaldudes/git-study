@@ -126,8 +126,34 @@ git log --before=yesterday -S "console.log" --all-match
 
 > 되돌리기 (git reset)
 
+특정 Commit으로 또는 브랜치의 HEAD로 현재 작업 내용을 되돌리거나 staging, commit을 되돌리는 경우에 사용.
+
+1. 옵션 설명
+
 ```sh
+# 모든 작업 내역을 설정한 기준으로 되돌림, 모든 변경/수정 사항 사라짐.
 git reset --hard
+# 이 명령어 그대로 쓰는 경우에는 현재 브랜치의 최근 커밋으로 되돌림.
+
+# 되돌리지만, 변경 내역은 unstaging 상태로 둠. 변경/수정 사항 사라지지 않음)
 git reset --mixed # Default
+
+# --mixed와 비슷, 하지만 변경 내역을 staging 상태로 둔다는 것이 차이.
 git reset --soft
+```
+
+2. 사용법
+
+```sh
+# staging 취소하기
+
+# 현재 staging되는 모든 파일 unstaging으로 변경
+git reset
+
+# 특정 파일만
+git reset <file_name>
+
+# 실수로 Commit 한 경우(push 이전)에 Commit 취소하기
+git reset HEAD^
+git reset HEAD~1 # 같은 의미 = 현재 가리키고 있는 Commit의 1개 이전의 Commit을 가리킴
 ```
