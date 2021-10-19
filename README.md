@@ -1,6 +1,6 @@
 # git-study
 
-> 원격 브랜치 로컬로 가져오기
+### 원격 브랜치 로컬로 가져오기
 
 ```sh
 git checkout -t origin/<remote-branch>
@@ -8,7 +8,7 @@ git checkout -t origin/<remote-branch>
 # example) git checkout -t origin/develop
 ```
 
-> 브랜치명 확인하기
+### 브랜치명 확인하기
 
 ```sh
 # local
@@ -23,7 +23,7 @@ git branch -a
 # git branch --all
 ```
 
-> 브랜치 정보(커밋 메세지, 커밋 해쉬) 확인하기
+### 브랜치 정보(커밋 메세지, 커밋 해쉬) 확인하기
 
 ```sh
 # local
@@ -36,7 +36,7 @@ git branch -rv
 git branch -av
 ```
 
-> 브랜치의 최근 커밋으로 되돌리기
+### 브랜치의 최근 커밋으로 되돌리기
 
 ```sh
 git checkout -- .
@@ -45,7 +45,7 @@ git checkout -- .
 git restore -- .
 ```
 
-> 브랜치 생성 후, 해당 브랜치로 전환
+### 브랜치 생성 후, 해당 브랜치로 전환
 
 ```sh
 git checkout -b <new-branch>
@@ -54,7 +54,7 @@ git checkout -b <new-branch>
 git switch -c <new-branch>
 ```
 
-> 변경 사항을 commit하지 않고 잠시 다른 곳에 저장해두는 경우
+### 변경 사항을 commit하지 않고 잠시 다른 곳에 저장해두는 경우
 
 ```sh
 # stash list 조회
@@ -70,7 +70,7 @@ git stash pop
 git stash apply <stash{id}>
 ```
 
-> commit log 확인하기 (git log)
+### commit log 확인하기 (git log)
 
 [참고글](https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%BB%A4%EB%B0%8B-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EC%A1%B0%ED%9A%8C%ED%95%98%EA%B8%B0)
 
@@ -124,7 +124,7 @@ git log --oneline --patch -- 파일이름
 git log --before=yesterday -S "console.log" --all-match
 ```
 
-> 되돌리기 (git reset)
+### 되돌리기 (git reset)
 
 특정 Commit으로 또는 브랜치의 HEAD로 현재 작업 내용을 되돌리거나 staging, commit을 되돌리는 경우에 사용.
 
