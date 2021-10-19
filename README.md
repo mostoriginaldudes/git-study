@@ -57,16 +57,15 @@ git switch -c <new-branch>
 > 변경 사항을 commit하지 않고 잠시 다른 곳에 저장해두는 경우
 
 ```sh
+# stash list 조회
+git stash list
+
 # git stash list에 있는 내용 다날리기
 git stash drop
-```
 
-```sh
 # 최근에 stack에 담아놓은 작업 내역을 가져오고, 지우기
 git stash pop
-```
 
-```sh
 # stack에 담긴 작업 내역을 반영하기
 git stash apply <stash{id}>
 ```
